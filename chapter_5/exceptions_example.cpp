@@ -19,8 +19,8 @@ int framed_area(int x, int y) // calculate area within frame
 
 
 
-int main(){
-    try {
+int main()
+    try {               // ---> This '{' is the '{' of main()
         int x = 1;
         int y = 2;
         int z = 4;
@@ -34,10 +34,8 @@ int main(){
         double ratio = area1/area3;
         std::cout << "Succeeded calculation of ratio with value " << ratio << '\n';
 
-    }
-    catch (Random_stuff) {
+    }               // ---> This '}' is the '}' of main()
+    catch (Random_stuff) {      //Since we are not catching the type thrown (Bad_area), the program will finish after throwing the exception.
         std::cout << "Oops! bad arguments to area()\n";
     }
     
-    std::cout << "Hello Worlddddddddddddd" << '\n';
-}
