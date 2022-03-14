@@ -1,5 +1,6 @@
 #include <iostream>
-#include "../std_lib_facilities.h"
+//#include "../std_lib_facilities.h"
+#include <vector>
 
 int main()
 try{
@@ -52,14 +53,16 @@ try{
         cout << "Success!\n"; */
     /*std::string s = "Success!\n"; 
     for (int i=0; i<=s.size(); ++i) cout << s[i]; */
-    cout << "Success!\n";
+    std::cout << "Success!\n";
+    std::vector<int> myvect{3,2,1};
+
 
 }
-catch(exception& e){
+catch(std::exception& e){
     std::cerr << "OMG, error: " << e.what() << '\n';
     return 1;
 }
 catch(...){
-    cerr << "Oops: unknown exception!\n";
+    std::cerr << "Oops: unknown exception!\n";
     return 2;
 }
